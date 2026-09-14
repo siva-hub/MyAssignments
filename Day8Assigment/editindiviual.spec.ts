@@ -5,15 +5,15 @@ test ('salesforce login', async({page})=>{
     await page.locator("[id='Login']").click()
     await page.locator("[id='password']").fill("TestLeaf@2025")
     await page.locator("[id='Login']").click()
-    await page.locator(".slds-icon-waffle").click()//Toggler
-    await page.locator("//button[@aria-label='View All Applications']").click()//viewAll
-    await page.locator("//p[text()='Individuals']").click()//Individuals
-    await page.locator("//span[text()='Individuals']").nth(0).click()//Individuals Tab
-    await page.locator("[name='Individual-search-input']").fill("Prakash")//Search for last name
-    await page.locator('//button[@class="slds-button slds-button_icon-border slds-button_icon-x-small"]').nth(1).click()//dropdown
-    await page.locator('//a[@class="highlightButton"]').nth(0).click()//Edit
-    await page.locator("//span[text()='Mr.']").click()//Sautation
-    await page.locator("//input[@placeholder='First Name']").fill("Siva")//FirstName
+    await page.locator(".slds-icon-waffle").click()
+    await page.locator("//button[@aria-label='View All Applications']").click()
+    await page.locator("//p[text()='Individuals']").click()
+    await page.locator("//span[text()='Individuals']").nth(0).click()
+    await page.locator("[name='Individual-search-input']").fill("Prakash")
+    await page.locator('//button[@class="slds-button slds-button_icon-border slds-button_icon-x-small"]').nth(1).click()
+    await page.locator('//a[@class="highlightButton"]').nth(0).click()
+    await page.locator("//span[text()='Mr.']").click()
+    await page.locator("//input[@placeholder='First Name']").fill("Siva")//First
     await page.locator('//span[@class=" label bBody"])').nth(2).click()//Save
     await expect(page.locator("//span[text()='Siva Prakash']")).toBeVisible()
 
